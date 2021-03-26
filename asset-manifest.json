@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/blog-challenge/static/css/main.64dcfa29.chunk.css",
+    "main.js": "/blog-challenge/static/js/main.fd189e15.chunk.js",
+    "main.js.map": "/blog-challenge/static/js/main.fd189e15.chunk.js.map",
+    "runtime-main.js": "/blog-challenge/static/js/runtime-main.9ab81c01.js",
+    "runtime-main.js.map": "/blog-challenge/static/js/runtime-main.9ab81c01.js.map",
+    "static/js/2.9056bc3a.chunk.js": "/blog-challenge/static/js/2.9056bc3a.chunk.js",
+    "static/js/2.9056bc3a.chunk.js.map": "/blog-challenge/static/js/2.9056bc3a.chunk.js.map",
+    "index.html": "/blog-challenge/index.html",
+    "static/css/main.64dcfa29.chunk.css.map": "/blog-challenge/static/css/main.64dcfa29.chunk.css.map",
+    "static/js/2.9056bc3a.chunk.js.LICENSE.txt": "/blog-challenge/static/js/2.9056bc3a.chunk.js.LICENSE.txt",
+    "static/media/undraw_Blog_post_re_fy5x.f03413df.svg": "/blog-challenge/static/media/undraw_Blog_post_re_fy5x.f03413df.svg",
+    "static/media/undraw_Post_re_mtr4.bf4f2840.svg": "/blog-challenge/static/media/undraw_Post_re_mtr4.bf4f2840.svg",
+    "static/media/undraw_Updates_re_o5af.3b0bd379.svg": "/blog-challenge/static/media/undraw_Updates_re_o5af.3b0bd379.svg",
+    "static/media/undraw_mobile_posts_tlwg.45f3ab7b.svg": "/blog-challenge/static/media/undraw_mobile_posts_tlwg.45f3ab7b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ab81c01.js",
+    "static/js/2.9056bc3a.chunk.js",
+    "static/css/main.64dcfa29.chunk.css",
+    "static/js/main.fd189e15.chunk.js"
+  ]
+}
