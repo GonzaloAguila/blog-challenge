@@ -1,14 +1,17 @@
 import { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {updatePost, fetchOnePost} from "../../store/reducers/postsReducer"
+import {
+  updatePost,
+  fetchOnePost,
+  fetchAllPosts,
+} from "../../store/reducers/postsReducer";
 import ParticlesBg from "particles-bg";
 import styles from "./styles.module.css";
 import Swal from "sweetalert2";
 
-const UpdatePost = ({match}) => {
+const UpdatePost = ({ match }) => {
   const dispatch = useDispatch();
-  console.log(fetchOnePost)
-  const [error, setError] = useState(true)
+  const [error, setError] = useState(true);
   const [input, setInput] = useState({
     title: "",
     body: "",
@@ -16,25 +19,33 @@ const UpdatePost = ({match}) => {
 
   const { singlePost } = useSelector((state) => state.posts);
 
-  useEffect(()=> {
-    dispatch(fetchOnePost(match.params.id))
-  }, [])
+  useEffect(() => {
+    dispatch(fetchAllPosts()).then(() =>
+      dispatch(fetchOnePost(match.params.id))
+    );
+  }, []);
 
   const handleChange = (e) => {
-    if(input.body.length >= 5 && input.title.length >= 5){
-      setError(false)
+    if (input.body.length >= 5 && input.title.length >= 5) {
+      setError(false);
     } else {
-      setError(true)
+      setError(true);
     }
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch(updatePost(input)).then(() => {
-    //   Swal.fire("Post Actualizado!", "El post fue actualizado correctamente.", "success");
-    //   setInput({title: "", body: ""})
-    // })
+    dispatch(
+      updatePost({ title: input.title, body: input.body, id: singlePost.id })
+    ).then(() => {
+      Swal.fire(
+        "Post Actualizado!",
+        "El post fue actualizado correctamente.",
+        "success"
+      );
+      setInput({ title: "", body: "" });
+    });
   };
 
   return (
@@ -63,13 +74,7 @@ const UpdatePost = ({match}) => {
             min="5"
             max="200"
           />
-          <button
-            disabled={
-               error
-            }
-            type="submit"
-            className={styles.btn}
-          >
+          <button disabled={error} type="submit" className={styles.btn}>
             Actualizar
           </button>
         </form>

@@ -37,7 +37,10 @@ export const Card = ({ post }) => {
           <h3>{post.title}</h3>
         </Link>
         <div className={styles.btnContainer}>
-          <Link className={styles.link} to={`/blog-challenge/updatePost/${post.id}`}>
+          <Link
+            className={styles.link}
+            to={`/blog-challenge/updatePost/${post.id}`}
+          >
             <EditFilled className={styles.btnUpdate} />
           </Link>
           <DeleteFilled
