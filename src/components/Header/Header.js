@@ -35,10 +35,10 @@ const Header = ({ generateImage }) => {
     <div className={styles.container}>
       <img className={styles.img} src={image} alt="header_image"></img>
       <ul className={styles.navUl}>
-        <Link className={styles.link} to="/">
+        <Link className={styles.link} to="/blog-challenge">
           <li className={styles.navLiOne}>Home</li>
         </Link>
-        <Link className={styles.link} to={"/newPost"}>
+        <Link className={styles.link} to={"/blog-challenge/newPost"}>
           <li className={styles.navLiTwo}>Formulario De Creación</li>
         </Link>
         <button className={styles.themeSwitcher} onClick={switchTheme}>

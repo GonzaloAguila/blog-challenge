@@ -15,10 +15,10 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Header generateImage={generateImage} />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/newPost" component={NewPost} />
-      <Route exact path="/updatePost/:id" component={UpdatePost} />
-      <Route exact path="/posts/:id" component={SinglePost} />
+      <Route exact path="/blog-challenge" component={Home} />
+      <Route exact path="/blog-challenge/newPost" component={NewPost} />
+      <Route exact path="/blog-challenge/updatePost/:id" component={UpdatePost} />
+      <Route exact path="/blog-challenge/posts/:id" component={SinglePost} />
     </BrowserRouter>
   </Provider>,
   document.getElementById("root")

@@ -33,11 +33,11 @@ export const Card = ({ post }) => {
   return (
     <article className={styles.article} key={post.id}>
       <div className={styles.text}>
-        <Link className={styles.link} to={`/posts/${post.id}`}>
+        <Link className={styles.link} to={`/blog-challenge/posts/${post.id}`}>
           <h3>{post.title}</h3>
         </Link>
         <div className={styles.btnContainer}>
-          <Link className={styles.link} to={`/updatePost/${post.id}`}>
+          <Link className={styles.link} to={`/blog-challenge/updatePost/${post.id}`}>
             <EditFilled className={styles.btnUpdate} />
           </Link>
           <DeleteFilled
