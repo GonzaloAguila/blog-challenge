@@ -63,4 +63,10 @@
     .img {
         display: none;
     }
+    .container {
+      font-size: 18px;
+    }
+    .navLiOne, .navLiTwo{
+      padding: 0 15px;
+    }
 }
